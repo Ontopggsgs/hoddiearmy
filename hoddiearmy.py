@@ -106,11 +106,11 @@ async def on_ready():
         with open(img, 'rb') as f:
             icon = f.read()
         await guild.edit(icon=icon)
-        print(lightyellow + "[+]", lightblack + "Server PFP has been changed succesfully")
+        print("Server PFP has been changed succesfully")
     except discord.Forbidden:
-        print(lightred + "[-]", lightblack + "Bot has no rights to change server PFP")
+        print("Bot has no rights to change server PFP")
     except FileNotFoundError:
-        print(lightred + "[-]", lightblack + "Image file not found")
+        print("Image file not found")
     channels = []
     for i in range(222):
         channel_name = new_channels_name
